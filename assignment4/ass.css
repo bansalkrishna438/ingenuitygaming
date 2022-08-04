@@ -1,0 +1,35 @@
+*{padding: 0;margin: 0;}
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 90px;
+}
+
+header{
+    
+    background-color: gray;
+    width: 98.8%;
+    height: 10vh;
+    position: fixed;
+    margin-top: 0%;
+    text-transform: uppercase;
+
+}
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    color: white;
+}
+header ul li{
+    margin-right: 90px;
+    margin-top: 0%;
+}
+.huy{
+    margin-top: 50px;
+    background-image: url(../assignment4/welcome-on-beach\ \(2\).jpg);
+    height: 100vh;
+    text-align: justify;
+    color:white;
+    
+    
+}
