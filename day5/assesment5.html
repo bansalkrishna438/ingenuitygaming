@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .sky
+        {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://images.unsplash.com/photo-1514477917009-389c76a86b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=767&q=80);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+        }
+        .highway
+        {
+            height: 200px;
+            width: 300%;
+            background-image: url(https://lh5.googleusercontent.com/rSamdzixsa7XYSzzPLX-XD65toInmIlpn0SpieAKiMNyKJTrHdAsl7oYu1QiVj5RwAcv9ZVgEwD21YE=w1898-h932);
+            position: absolute;
+            background-size: cover;
+            bottom: 0;
+            left: 0;
+            right: 0;
+             animation: highway 5s linear infinite;
+        }
+        @keyframes highway {
+            100%
+            {
+                transform: translateX(-1500px);
+            }
+           
+        }
+        .city
+        {
+            width: 300%;
+            height: 200px;
+            background-image: url(https://lh3.googleusercontent.com/cX94nEWTNe6x8J94PRKJtcYgx8SNNVN9J0G_Zpqjdi2h3nk2xoMyo7MMl6dysjk0_HDXAfthEvAA3Tg=w1898-h932);
+            position: absolute;
+            bottom: 200px;
+            left: 0;
+            right: 0;
+            /* background-repeat: no-repeat;
+            background-size: cover; */
+            /* z-index: 2; */
+            animation: city 5s linear infinite;
+
+        }
+        @keyframes city {
+            100%
+            {
+                transform: translateX(-1500px);
+            }
+           
+        }
+        .car
+        {
+            width: 400px;
+       
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom:100px ;
+            z-index: 2;
+         
+        }
+        .car img{
+            width: 100%;
+            animation: car 1s linear infinite;
+           
+         
+        }
+        @keyframes car {
+           
+            0%
+            {
+              transform: translateY(-5px);
+            }
+            50%
+            {
+                transform: translateY(0px);
+            }
+           100%
+            {
+                 transform: translateY(5px);
+            }
+           
+        }
+        .wheel
+        {
+            border: 2px solid black;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 185px;
+            z-index: 2;
+           
+        }
+        .wheel img{
+
+            width: 72px;
+            height: 72px;
+        }
+        .front-wheel
+        {
+            position: absolute;
+            left: 80px;
+            animation: wheel 1s linear infinite;
+        }
+        .back-wheel
+        {
+            position: absolute;
+            left: -165px;
+            animation: wheel 1s linear infinite;
+        }
+        @keyframes wheel {
+            100%
+            {
+                transform: rotate(360deg);
+            }
+           
+        }
+    </style>
+</head>
+<body>
+   
+        <div class="sky">
+
+        <div class="highway"></div>
+        <div class="city"></div>
+        <div class="car">
+            <img src="https://lh5.googleusercontent.com/mDdccd9kkAi5wMvRYdKyAct0HGFQHCJfGrGWVXXwhpKj-DUYEPUbOfAy-O0QyDF1HPuBV7WsVQ7gwMk=w1898-h932" alt="">
+        </div>
+        <div class="wheel">
+            <img src="https://lh3.googleusercontent.com/yHfj69E2bbruXYEDmYfXSInlksTqOr23OfkFENSKohXj1-TLFXDcsMnrM5UTSPGwuNgnM_I1-vdQfJk=w1898-h932" alt="" class="  front-wheel">
+            <img src="https://lh3.googleusercontent.com/yHfj69E2bbruXYEDmYfXSInlksTqOr23OfkFENSKohXj1-TLFXDcsMnrM5UTSPGwuNgnM_I1-vdQfJk=w1898-h932" alt=""  class="  back-wheel">
+
+        </div>
+    </div>
+</body>
+</html>
