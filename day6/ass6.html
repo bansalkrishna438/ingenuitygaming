@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ASS1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align:center; background-color: rgb(243, 193, 198);height: 10vh;font-size: 90px;"><i>hello</i> <i id="name3" style=""></i></h1>
+    <h2 class="ca"id="hy"></h2>
+    <h2 class="ca"id="hi"></h2>
+    <h3 class="cla">Addition of number:<span id="add"></span></h3>
+    <h3 class="cla">subtraction of number:<span id="sub"></span></h3>
+    <h3 class="cla">Multiplication of number:<span id="mul"></span></h3>
+    <h3 class="cla">division of number:<span id="div"></span></h3>
+    
+    
+    <script>
+        var name=prompt("enter your name");
+
+        var a=prompt("enter the first Number");
+        var b=prompt("enter the second Number");
+        var today = new Date();
+        
+        var date = "<h2>Today Date: 0"+today.getDate()+'/0'+(today.getMonth()+1)+'/'+today.getFullYear()+"</h2>";
+        
+
+
+        var myDate = new Date();
+        var myDay = myDate.getDay();
+        
+
+        var weekday = ['Sunday', 'Monday', 'Tuesday',
+            'Wednesday', 'Thursday', 'Friday', 'Saturday'
+        ];
+        var day="<h2>Today Day : " + weekday[myDay]+"</h2>";
+
+        var add=Number(a)+Number(b);
+        var sub = a-b;
+        var mul =a*b;
+        var div=a/b;
+        
+        
+        document.getElementById("name3").innerHTML=name;
+        document.getElementById("hy").innerHTML=date;
+        document.getElementById("hi").innerHTML=day;
+        document.getElementById("add").innerHTML=add;
+        document.getElementById("sub").innerHTML=sub;
+        document.getElementById("mul").innerHTML=mul; 
+        document.getElementById("div").innerHTML=div;
+        
+
+        
+        
+
+    </script>
+        
+    <script src="./day6.js"></script>
+</body>
+</html>
