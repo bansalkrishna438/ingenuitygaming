@@ -24,8 +24,24 @@
         var b=prompt("enter the second Number");
         var today = new Date();
         
-        var date = "<h2>Today Date: 0"+today.getDate()+'/0'+(today.getMonth()+1)+'/'+today.getFullYear()+"</h2>";
-        
+        // var date = "<h2>Today Date: 0"+today.getDate()+'/0'+(today.getMonth()+1)+'/'+today.getFullYear()+"</h2>";
+        var datedig = today.getDate();
+        if(datedig<10){
+            var datedig="0"+datedig;
+        }
+        else{
+            var datedig=datedig;
+        }
+
+        var month=today.getMonth()+1;
+        if(month<10){
+            var month="0"+month;
+        }
+        else{
+            var month=month;
+        }
+
+        var date="<h2>Today is :"+datedig+"/"+month+"/"+today.getFullYear()+"</h2>";
 
 
         var myDate = new Date();
