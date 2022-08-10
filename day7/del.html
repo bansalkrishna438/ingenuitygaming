@@ -19,7 +19,7 @@
           align-items: center;
           font-size: 60px;
           overflow: hidden;
-          padding: 300px;
+          padding: 200px;
           font-style: italic;
           color: #3B0404;
         }
@@ -28,7 +28,7 @@
 <body>
     <div class="box1" id="box11"></div>
     <script>
-        var person_Obj={
+        var person={
     name:"krishna bansal",
     age:21,
     address:{city:"Agra",state:"Uttar Pradesh",pincode:282007},
@@ -37,8 +37,7 @@
         return (`Name: ${this.name} <br> Age: ${this.age} <br> Address: ${this.address.city}, ${this.address.state}, ${this.address.pincode} <br> Hobbies is: ${this.hobbies[0]}, ${this.hobbies[1]}, ${this.hobbies[2]}`);
     }
 }
-document.getElementById("box11").innerHTML=person_Obj.display();//sdocument.body.innerHTML="<h1 class='hy'>"+"</h1>";
-//document.write(person_Obj.display());
+document.getElementById("box11").innerHTML=person.display();
     </script>
 </body>
 </html>
