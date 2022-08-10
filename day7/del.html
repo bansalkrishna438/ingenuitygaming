@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        .box1{
+          margin: auto;
+          padding: 10px;
+          background-image:radial-gradient(#EDD0C0,#BC8880,#C8626D);
+          height: 100vh ;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          font-size: 60px;
+          overflow: hidden;
+          padding: 300px;
+          font-style: italic;
+          color: #3B0404;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" id="box11"></div>
+    <script>
+        var person_Obj={
+    name:"krishna bansal",
+    age:21,
+    address:{city:"Agra",state:"Uttar Pradesh",pincode:282007},
+    hobbies:["cooking","badminton","listning music"],
+    display:function(){
+        return (`Name: ${this.name} <br> Age: ${this.age} <br> Address: ${this.address.city}, ${this.address.state}, ${this.address.pincode} <br> Hobbies is: ${this.hobbies[0]}, ${this.hobbies[1]}, ${this.hobbies[2]}`);
+    }
+}
+document.getElementById("box11").innerHTML=person_Obj.display();//sdocument.body.innerHTML="<h1 class='hy'>"+"</h1>";
+//document.write(person_Obj.display());
+    </script>
+</body>
+</html>

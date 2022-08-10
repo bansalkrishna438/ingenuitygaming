@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    
+</head>
+<body style="background-image:linear-gradient(pink,white);height: 100vh;">
+    <h1 > <span id="code"></span></h1>
+    <div class="div" id="di"></div>
+    <div class="div" id="diya"></div>
+    <script>
+        const random =Math.floor(Math.random() * 10)+1;
+        for(var k=1;k<=3;k++){
+            var kar=parseInt(prompt("enter the number"));
+            if(kar==random){
+                alert("congratulation u have entered the corrent no");
+                break;
+               
+            }
+            else{
+                alert("Try again");
+                
+            }
+        }
+        if(kar==random){
+           // document.write("you wan the game");
+            document.getElementById("code").innerHTML="you wan the game";
+            document.getElementById("di").style.backgroundImage="url('./winner.jpg')";
+            
+        }
+        else{
+            //document.write("better luck foe next time");
+            document.getElementById("code").innerHTML="better luck foe next time";
+            document.getElementById("di").style.backgroundImage="url('./losser.jpg')";
+        }
+        
+    </script>
+</body>
+</html>
