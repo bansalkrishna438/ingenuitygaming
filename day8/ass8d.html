@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(141, 138, 123);">
+    <h2 style="text-align:center; padding: 10px; background-color: beige;">Write a code to add an Element at a particular List inside an array</h2>
+   <div class="con" style="background-color: aqua; width: 80%;height: 300px; margin: auto;">
+    <h3 style="padding: 10px;">Array with list:- <span id="or" style="font-size: 20px;"></span></h3>
+    <h3 style="padding: 10px;">After adding Element:- <span id="ou" style="font-size: 20px;"></span></h3>
+</div>
+    <script>
+        var a=['krishna bansal' ,191500409 ,{name:'astha',roll:191500490},9090];
+        document.getElementById('or').innerHTML=(JSON.stringify(a, null, 4));
+        var inp=prompt('Enter the city for adding in list inside array');
+    
+        a[2].city=inp;
+        document.getElementById('ou').innerHTML=(JSON.stringify(a, null, 4));
+       
+    </script>
+</body>
+</html>
