@@ -54,3 +54,65 @@ console.log(a());
 // function sayHello(a, b){
 //     console.log("result="+ (a + b));
 // }
+
+
+// javascript scope
+// there are 3 types of scope
+// 1. block scope
+// function scope1(){
+//     {
+//         var a=10;
+//         console.log("Inside scope1");
+//             console.log(a);
+//         function scope2(){
+//             console.log("Inside scope2");
+//             console.log(a);
+//         }
+//         scope2();
+//     }
+//     scope1();
+//     console.log(a);
+// }
+
+
+// function checkVar(){
+
+//     let data = 20;
+//     console.log(data);
+// }
+// checkVar();
+// console.log(data);
+
+
+// function add(a,b){
+//     return a+b;
+// }
+// var sum= add;
+// console.log(sum(5,10));
+// console.log(add(5,10));
+
+// function avg(a,b,sum){
+//     return sum(a,b,)/2;
+// }
+// function add(a,b){
+//     return a+b;
+// }
+// var sum =add;
+// var result = avg(6,90,add);
+// console.log("final result = "+result);
+
+function Person(){
+    //properties
+
+    this.name = "Krishna";
+    this.age=21;
+
+    //methode
+    this.details = function(){
+        return "Name = " +this.name + "Age:"+this.age;
+    };
+}
+var obj1=new Person();
+console.log(obj1.name);
+obj1.name="sachine";
+console.log(obj1.details());

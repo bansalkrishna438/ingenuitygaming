@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=scr, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-image: linear-gradient(#f4a261,#ffbf69);height: 100vh;">
+    <div class="con" style="width: 80%; height: 500px; background-image: linear-gradient(#e7c6ff,#e29578); margin-top: 200px;border: 2px solid white;border-radius: 20%;margin-left: 175px;">
+    <h2 style="text-align: center; padding: 30px;"><i>
+      Write a JavaScript program to create a new string from a given string
+      taking first 3 characters and the last 3 characters of a string and add
+      them together. The string length must be 3 or more. If not, return the
+      original string is returned. (Use Functional Approach)</i></h2>
+    <h2 style="text-align:center ; padding: 20px;"><i> String:- </i><span id="inp" style="font-size: 30px;"></span></h2>
+    <h2 style="text-align: center; padding: 20px;"><i>Result String is:- </i><span id="re" style="font-size: 30px;"></span></h2>
+</div>
+   <script>
+      var str = prompt("Enter the String");
+      document.getElementById('inp').innerHTML=str;
+      constr(str);
+      function constr(str) {
+        var n = str.length;
+        
+        str = str.split("");
+        var stt = "";
+        if (n < 3) {
+          str2 = str.join("");
+          document.getElementById('re').innerHTML=str2;
+         
+        } else {
+          for (var i = 0; i < 3; i++) {
+            stt = stt + str[i];
+          }
+          for (var j = n - 3; j < n; j++) {
+            stt = stt + str[j];
+          }
+          document.getElementById('re').innerHTML=stt;
+          
+        }
+      }
+    </script>
+  </body>
+</html>

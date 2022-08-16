@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:linear-gradient(#faedcd,#d4a373);height: 100vh;">
+    <h2 style="text-align:center;justify-content: center;align-items: center;padding-top: 300px;color: rgb(66, 33, 200);font-size: 30px;">display Function :- <pre id="re"></pre></h2>
+    <script>
+        function getNames() {
+
+            let firstName = 'krishna ',
+            lastName = 'bansal';
+  return {
+    'firstName': firstName,
+    'lastName': lastName
+  };
+}
+ 
+ console.log(getNames);
+ document.getElementById('re').innerHTML=getNames;
+ 
+ 
+
+    </script>
+</body>
+</html>
