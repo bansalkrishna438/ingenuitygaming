@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>
+        How to remove spaces from
+        a string using JavaScript?
+    </title>
+</head>
+ 
+<body  style="background-color: #cdb4db;">
+    <div class="con" style="margin: auto; height: 300px; width: 50%; background-color: #ffafcc; text-align: center;">
+    <h1 style="color: #bde0fe">
+       <i> Assignmant-->8a</i>
+    </h1>
+     
+    <b style="color:#bde0fe ;">
+        How to remove spaces from
+        a string using JavaScript?
+    </b>
+     
+    <p style="font-size: 20px; color: #bde0fe;">
+       <i>Original string is: </i><pre id="or" style="font-size: 18px;"></pre>
+        
+    </p>
+     
+    <p style="font-size: 20px;color: #bde0fe;"><i>New String is:</i>
+        <span class="output"></span>
+    </p>
+     
+    <button onclick="removeSpaces()" style="background-color: #bde0fe; border-radius: 20px; padding: 8px;" >
+        Remove Spaces
+    </button>
+</div>
+     
+    <script type="text/javascript">
+        var st=prompt("Enter the String with Extra Spaces");
+        document.getElementById('or').innerHTML=st;
+        function removeSpaces() {
+        
+            
+         
+            
+            const sentence = st.replace(/\s+/g, ' ').trim()
+         
+            document.querySelector('.output').textContent
+                    = sentence;
+        }
+    </script>
+</body>
+ 
+</html>
