@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: burlywood; color: blanchedalmond;font-size: 30px;font-family:'Courier New', Courier, monospace;text-align: center;padding-top: 300px;font-style:oblique;">
+    <script>
+        document.write("call function is used <br>");
+        var obj = {
+    firstName:"sachin",
+    lastNmae:"yadav",
+    // using function to create method of objects
+    fullName: function(){
+        return this.firstName+" "+this.lastNmae+"<br> ";
+        }
+    };
+
+    document.write(obj.fullName());
+    document.write("Applied function is used <br>");
+    var person={
+    fullName:function(city,country){
+        return (this.firstName+" "+this.lastName+" "+city+" "+country+"<br>")
+    },
+ };
+ var person1 = {
+    firstName:"sara",
+    lastName:"khan"
+ };
+document.write(person.fullName.call(person1,"Munbai","india"));
+    </script>
+</body>
+</html>
