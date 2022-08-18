@@ -38,6 +38,5 @@ function start(){
 function point()
     {
         p=p+1;
-         console.log(p)
         document.getElementById('score').innerHTML=p;
     }
