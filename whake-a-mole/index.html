@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WHAKE A MOLE GAME</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="dom.js" /> -->
-    
   </head>
-  <body>
+  <body >
     <h1>WHAKE A MOLE</h1>
     <img src="mole.png" id="mole" />
     <img src="dirt.svg" id="mud" />
-    <button type="button" id="start" onclick="start()">START</button>
+    <button type="button" id="start" onclick="start();play()" >START</button>
 
     <img src="dirt.svg" id="dirt1" class="dirt" />
     <img src="dirt.svg" id="dirt2" class="dirt"  />
@@ -29,9 +27,9 @@
     <img src="mole.png" id="mole5" class="mole" onclick="point()"/>
     <img src="mole.png" id="mole6" class="mole" onclick="point()"/>
 
-    <span class="points" style="visibility:hidden ;">YOUR POINT :- <span id="score" ></span></span>
+    <span class="points" style="visibility:hidden ;">YOUR POINT :- <span id="score" >0</span></span>
+    <span class="points2" style="visibility:hidden ;">Time :- <span id="score2" ></span></span>
     <!-- <span id="currentPoint" class="points">0</span> -->
-
     <script src="dom.js"></script>
   </body>
 </html>

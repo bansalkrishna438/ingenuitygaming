@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+      body {
+        background-image: url("./images/bg10.jpg");
+        
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        
+      }
+      H1{
+        text-align: center;
+        margin: 10PX;
+        padding:10px;
+      }
+     
+        .box1 {
+            padding: 20px;
+            margin: auto;
+            width: 60%;
+            height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+    </style>
+  </head>
+  <body>
+    <H1>
+        Your Point is :- <span id="re"></span>
+    </H1>
+    <h1 id="won" style="text-align:center; font-size: 30px; padding: 20px; margin: 10px; text-align: center;">
+    
+    </h1>
+    <div class="box1" id="b1"></div>
+
+    
+     <script>
+      var ppp=localStorage.getItem("point");
+      document.getElementById('re').innerHTML=ppp;
+      console.log(ppp);
+       // var point = prompt("enter the number")
+        if (ppp>10){
+            document.getElementById("won").innerHTML = "YOU ARE WINNER";
+            document.getElementById("b1").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEaVf0bvcz8RR2E02BtEwn29T56w_EwJON7A&usqp=CAU')";
+            
+                
+            
+        }
+       
+        if (ppp <10) {
+            document.getElementById("won").innerHTML = "YOU ARE LOSSER";
+            document.getElementById("b1").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2STZc3ALb6CnnnKOLJIiHkvTMl0zbpQh7Bw&usqp=CAU')";
+        }
+    </script> 
+    
+</html>
