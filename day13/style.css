@@ -1,0 +1,94 @@
+/ ------------Initial Phase CSS--------------- /
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: linear-gradient(120deg, skyblue, blue);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+  }
+  header,
+  form {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header {
+    font-size: 40px;
+  }
+  
+  form input,
+  form button {
+    padding: 10px;
+    border: none;
+    font-size: 24px;
+    background: white;
+    outline: none;
+  }
+  form button {
+    color: blue;
+    background-color: white;
+    cursor: pointer;
+  }
+  form button:hover {
+    color: white;
+    background-color: skyblue;
+  }
+  
+  / ----------------New List Container----------------- /
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    list-style: none;
+    min-height: 25%;
+}
+
+.todo{
+    background-color: white;
+    font-size: 24px;
+    margin: 8px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.cmpltbtn,.deltbtn{
+    color: white;
+    background-color: teal;
+    border: none;
+    padding: 16px;
+    outline: none;
+    font-size: 16px;
+}
+
+.deltbtn{
+    background-color: deeppink;
+}
+
+.todo_item{
+    margin: 0 10px;
+}
+
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+
+.check{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
