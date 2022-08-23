@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><form ></form></title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .heading{
+            text-align: center;
+        }
+        .container{
+            text-align: center;
+            /* justify-content: ;
+            align-items: center; */
+            background-color: aliceblue;
+            height: 50vh;
+            margin-left: 600px;
+            margin-right: 600px;
+            border-radius: 2%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Contact Form</h1>
+    <div class="container">
+        <p>Tell Us About You</p>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname"><br><br>
+        Email:<input type="text" name="lname"><br><br>
+        On a scale 1-10, how hood was it?<input type="text" name="lname"><br><br>
+        <label for="cars">where you want to use it?</label>
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select> <br><br>
+        At what time We can contact you?<input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label><br><br>
+        what emontions did you exoerience? <input type="checkbox" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+          <input type="checkbox" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="checkbox" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label><br>
+        please describe your positive experience:<input type="text" name="lname"><br><br>
+      </form>
+    <button>Summit</button>
+    </div>
+</body>
+</html>
