@@ -63,11 +63,6 @@ todoList.onclick=function checkbtn(e){
     }
 };
 
-
-
-
-
-
     btn.onclick = function createToDo(e){
     e.preventDefault();
 
@@ -148,4 +143,9 @@ todoList.onclick=function checkbtn(e){
         }
     };
 }
+function play() {
+    var audio = new Audio('notification-sound-7062.mp3');
+    audio.play();
+  }
+//   window.onload = play() ;
 
