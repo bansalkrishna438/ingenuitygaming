@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        header{
+            background-color: black;
+            color: white;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 15px;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+        }
+        header h1{
+            margin-top: 25px;
+        }
+        main{
+            background-color: rgb(236, 98, 13);
+            border: 2px solid orange;
+             /* width: 70%; 
+             height: 50vh;  */
+            margin-top:20px ;
+            margin-left: 400px;
+            /* / margin-right: 800px; / */
+            padding: 20px;
+            
+        }
+        main h2{
+            color: blueviolet;
+            text-align: center;
+        }
+        main h3{
+            color: white;
+            font-weight: 2000;
+        }
+    </style>
+    <title>api</title>
+</head>
+<body style="
+background: rgb(244,5,5);
+background: linear-gradient(90deg, rgba(244,5,5,1) 0%, rgba(163,35,31,1) 51%, rgba(246,207,157,1) 100%);">
+    <header>
+        <h1>Fetching Data using Covid API</h1>
+    </header>
+    <main style="margin-right:400px ;">
+        <h2>Today Covid Cases</h2>
+        <h3>Country Name: <span id="y1" style="color:black  ; font-size: 20px; margin-left: 10px;"></span> </h3>
+        <h3>date: <span id="y2" style="color:black ; margin-left: 10px;font-size: 20px;"></span > </h3>
+        <h3>Total cases: <span id="y3" style="color:black ; margin-left: 10px;font-size: 20px;"></span> </h3>
+        <h3>Tatal Deaths: <span id="y4" style="color:black ; margin-left: 10px;font-size: 20px;"></span> </h3>
+        <h3>new Cases: <span id="y5" style="color:black ; margin-left: 10px;font-size: 20px;"></span> </h3>
+        <h3>New Deaths: <span id="y6" style="color:black ; margin-left: 10px;font-size: 20px;"></span> </h3>
+    </main>
+
+    <script src="apicall.js"></script>
+    
+</body>
+</html>
