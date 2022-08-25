@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Tags</title>
+</head>
+<body>
+    <audio controls loop autoplay muted id="myAudio">
+        <source src="./day13/notification-sound-7062.mp3" type="audio/mp3"/>
+        <source src="./day13/notification-sound-7062.mp3" type="audio/mp3"/>
+        <source src="./day13/notification-sound-7062.mp3" type="audio/mp3"/>
+        <source src="./day13/notification-sound-7062.mp3" type="audio/mp3"/>
+    </audio>
+    <button id="btn1">play</button>
+
+    <script>
+        var myAudio = document.getElementById("myAudio");
+        // console.log(myAudio);
+
+        var btn = document.getElementById("btn1");
+
+        btn.onclick =performAudioTask;
+        function performAudioTask(){
+            myAudio.play();
+            myAudio.src="./";
+            myAudio.play();
+            myAudio.load();
+            myAudio.autoplay=true;
+            if(myAudio.muted==true){
+                myAudio.muted=false;
+            }else{
+                myAudio.muted=true;
+            }
+        }
+
+        var newAudio = new Audio();
+        newAudio.src="";
+        newAudio.play();
+        newAudio.loop = true;
+        newAudio.play();
+    </script>
+    <!-- <video controls width="" height="" autoplay id="myVideo">
+        <source src="" type="video/mp4"/>
+        <source src="" type="video/mp4"/>
+        <source src="" type="video/mp4"/>
+        <source src="" type="video/mp4"/>
+    </video> -->
+</body>
+</html>
