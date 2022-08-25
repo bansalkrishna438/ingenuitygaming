@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         background-image: url(https://education.rajasthan.gov.in/content/dam/doitassets/education/medicaleducation/gmc-kota/pdf/studentpanel/covid19/giphy11.gif);
@@ -81,6 +89,8 @@
         border-radius: 40px;
         margin-left: 600px;
         margin-top: 20px;
+        width: 200px;
+        height: 50px;
       }
       .connectivity {
         text-align: center;
@@ -99,10 +109,11 @@
     <header>
       <h1>Fetching Data using Covid API</h1>
     </header>
-    <h2 class="connectivity"></h2>
-      <span class="material-icons"> </span>
-    <button onclick="check1()" class="btn">
-      click here to check the connectivity
+    <div id="statusDiv">
+        <h2 class="connectivity"></h2>
+        <span class="material-icons"> </span>
+        <button onclick="check1()" class="btn">check Network connectivity</button>
+      </div>
     </button>
     <main style="margin-right: 400px">
       <h2>Today Covid Cases</h2>
