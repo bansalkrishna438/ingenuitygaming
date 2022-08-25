@@ -44,4 +44,3 @@ getApiData(API_URL)
    // document.getElementById("y1").innerHTML=serverData.Countries[i].Country;
     }
 }
-

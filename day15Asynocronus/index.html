@@ -1,111 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        body{
-            background-image: url(https://education.rajasthan.gov.in/content/dam/doitassets/education/medicaleducation/gmc-kota/pdf/studentpanel/covid19/giphy11.gif);
-            background-size: cover;
-           
-        }
-        
-        header{
-            background-color: rgb(228, 39, 39);
-            color: white;
-            text-align: center;
-            border: 2px solid black;
-            border-radius: 15px;
-            justify-content: center;
-            align-items: center;
-            height: 10vh;
-        }
-        header h1{
-            margin-top: 25px;
-        }
-        main{
-            /* background-color: rgb(236, 98, 13); */
-            /* border: 2px solid orange; */
-             /* width: 70%; 
-             height: 50vh;  */
-            margin-top:20px ;
-            margin-left: 400px;
-            /* margin-right: 800px; */
-            padding: 20px;
-            
-        }
-        main h2{
-            font-size: 50px;
-            color: white;
-            text-align: center;
-        }
-        main h3{
-            text-align: center;
-            font-size: 30px;
-            color: white;
-            font-weight: 2000;
-        }
+      body {
+        background-image: url(https://education.rajasthan.gov.in/content/dam/doitassets/education/medicaleducation/gmc-kota/pdf/studentpanel/covid19/giphy11.gif);
+        background-size: cover;
+      }
 
-        @media screen and(max-width:800px) {
-            header{
-            background-color: black;
-            color: white;
-            text-align: center;
-            border: 2px solid black;
-            border-radius: 15px;
-            justify-content: center;
-            align-items: center;
-            height: 10vh;
+      header {
+        background-color: rgb(228, 39, 39);
+        color: white;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+      }
+      header h1 {
+        margin-top: 25px;
+      }
+      main {
+        height: 60vh;
+        /* margin-top:10px ; */
+        margin-left: 400px;
+        padding: 20px;
+      }
+      main h2 {
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      main h3 {
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        font-weight: 2000;
+      }
+
+      @media screen and(max-width:800px) {
+        header {
+          background-color: black;
+          color: white;
+          text-align: center;
+          border: 2px solid black;
+          border-radius: 15px;
+          justify-content: center;
+          align-items: center;
+          height: 10vh;
         }
-        header h1{
-            margin-top: 25px;
+        header h1 {
+          margin-top: 25px;
         }
-        main{
-            /* background-color: rgb(236, 98, 13); */
-            /* border: 2px solid orange; */
-             /* width: 70%; 
-             height: 50vh;  */
-            margin-top:20px ;
-            margin-left: 400px;
-            /* margin-right: 800px; */
-            padding: 20px;
-            
+        main {
+          height: 60vh;
+          /* margin-top:10px ; */
+          margin-left: 400px;
+          padding: 20px;
         }
-        main h2{
-            font-size: 50px;
-            color: red;
-            text-align: center;
+        main h2 {
+          font-size: 50px;
+          color: red;
+          text-align: center;
         }
-        main h3{
-            text-align: center;
-            font-size: 30px;
-            color: white;
-            font-weight: 2000;
+        main h3 {
+          text-align: center;
+          font-size: 30px;
+          color: white;
+          font-weight: 2000;
         }
-            
-        }
-        
+      }
+      .btn {
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+        background-color: blue;
+        border-radius: 40px;
+        margin-left: 600px;
+        margin-top: 20px;
+      }
+      .connectivity {
+        text-align: center;
+        color: white;
+      }
+      .material-icons {
+        font-size: 40px;
+        display: block;
+        color: white;
+        text-align: center;
+      }
     </style>
     <title>api</title>
-</head>
-<body>
-    
-        <header>
-            <h1>Fetching Data using Covid API</h1>
-        </header>
-        <main style="margin-right:400px ;">
-            <h2>Today Covid Cases</h2>
-            <h3>Country Name: <span id="y1" style=" font-size: 20px; margin-left: 10px;"></span> </h3>
-            <h3>date: <span id="y2" style=" margin-left: 10px;font-size: 20px;"></span > </h3>
-                <h3>Total cases: <span id="y3" style=" margin-left: 10px;font-size: 20px;"></span> </h3>
-                <h3>Tatal Deaths: <span id="y4" style=" margin-left: 10px;font-size: 20px;"></span> </h3>
-            <h3>new Cases: <span id="y5" style=" margin-left: 10px;font-size: 20px;"></span> </h3>
-            <h3>New Deaths: <span id="y6" style=" margin-left: 10px;font-size: 20px;"></span> </h3>
-        </main>
-    
+  </head>
+  <body>
+    <header>
+      <h1>Fetching Data using Covid API</h1>
+    </header>
+    <h2 class="connectivity"></h2>
+      <span class="material-icons"> </span>
+    <button onclick="check1()" class="btn">
+      click here to check the connectivity
+    </button>
+    <main style="margin-right: 400px">
+      <h2>Today Covid Cases</h2>
+      <h3>
+        Country Name:
+        <span id="y1" style="font-size: 20px; margin-left: 10px"></span>
+      </h3>
+      <h3>
+        date: <span id="y2" style="margin-left: 10px; font-size: 20px"></span>
+      </h3>
+      <h3>
+        Total cases:
+        <span id="y3" style="margin-left: 10px; font-size: 20px"></span>
+      </h3>
+      <h3>
+        Tatal Deaths:
+        <span id="y4" style="margin-left: 10px; font-size: 20px"></span>
+      </h3>
+      <h3>
+        new Cases:
+        <span id="y5" style="margin-left: 10px; font-size: 20px"></span>
+      </h3>
+      <h3>
+        New Deaths:
+        <span id="y6" style="margin-left: 10px; font-size: 20px"></span>
+      </h3>
+    </main>
 
+    <script>
+      var s = document.querySelector(".connectivity");
+      var i = document.querySelector(".material-icons");
+
+      function onlineStatus() {
+        s.innerHTML = "You are Online";
+        i.innerHTML = "wifi";
+        i.style.color = "white";
+        console.log("Online");
+      }
+      function offlineStatus() {
+        s.innerHTML = "You are Offline";
+        i.innerHTML = "wifi_off";
+        i.style.color = "white";
+        console.log("offline");
+      }
+
+      function check1() {
+        setInterval(() => {
+          if (navigator.onLine) {
+            onlineStatus();
+          } else {
+            offlineStatus();
+          }
+        }, 500);
+      }
+    </script>
     <script src="apicall.js"></script>
-    
-</body>
+  </body>
 </html>
