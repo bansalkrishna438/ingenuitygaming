@@ -14,16 +14,20 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  
   }
   #canvas {
     margin-top: 10px;
     /* background-color: azure; */
     border-radius: 10px;
   }
+  /* #canvas img{
+    width: 900px;
+    height: 900px;
+  } */
   #source {
     display: none;
-    width: 100px;
-    height: 100px;
+    
     
   }
   

@@ -5,10 +5,10 @@ var ctx = canvas.getContext("2d");
 const image = document.getElementById("source");
 
 const player = {
-  w: 50,
-  h: 70,
-  x: 20,
-  y: 200,
+  w: 150,
+  h: 200,
+  x: 80,
+  y: 400,
   speed: 5,
   dx: 0,
   dy: 0,
