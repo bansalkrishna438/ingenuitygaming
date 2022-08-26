@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('https://img.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg?size=626&ext=jpg&ga=GA1.2.654880244.1659504230');
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 400px;
+        }
+        .container {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.container:after {
+  content: " ";
+  display: block;
+  width: 34px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 4px solid black;
+  border-color: black;
+  animation: container 2.2s linear infinite;
+}
+@keyframes container {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#btn{
+    background-color: transparent;
+    width: 300px;
+    height: 10vh;
+    border-radius:40px ;
+    color: orange;
+    font-size: 30px;
+}
+
+    </style>
+</head>
+<body >
+    <div class="container">
+        <div class="box"></div>
+        <div class="box1"></div>
+        <p>Loading<span> . . . </span></p>
+      </div>
+  
+      <div class="container1">
+        <button id="btn" onclick="OpenWindow();play()">click here to start the game</button>
+      </div>
+    <script>
+        window.onload = function () {
+          setInterval(() => {
+            stoploader();
+          }, 3000);
+        };
+        function stoploader() {
+          document.querySelector(".container").style.display = "none";
+          document.querySelector(".container1").style.display = "block";
+        }
+  
+        function OpenWindow() {
+          var url = "game.html";
+          var windowSize = "height=1700,width=1700";
+          var newWindow = window.open(url, "_top", windowSize);
+          newWindow.moveTo(500, 100);
+        }
+        document.querySelector(".container1").style.display = "none";
+  
+        //  setTimeout(stoploading,5000)
+        //  function stoploading() {
+  
+        //   var url = "game.html";
+        //   var windowSize = "height=500,width=500";
+        //   var newWindow = window.open(url, "_blank", windowSize);
+        //   newWindow.moveTo(500, 100);
+  
+        //  }
+        function play(){
+            var audio= new Audio('Justin-Bieber-Baby-instrumentalfx.mp3');
+            audio.play();
+        }
+      </script>
+</body>
+</html>

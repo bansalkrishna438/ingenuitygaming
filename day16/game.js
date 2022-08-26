@@ -110,3 +110,8 @@ update();
 
 document.addEventListener("keydown", keyDown);
 document.addEventListener("keyup", keyUp);
+
+function play(){
+  var audio = new Audio('Justin-Bieber-Baby-instrumentalfx.mp3');
+    audio.play();
+}
