@@ -9,6 +9,7 @@
     font-size: 30px;
     background-image: url('https://img.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg?size=626&ext=jpg&ga=GA1.2.654880244.1659504230');
     background-size: cover;
+    /* border: 2px solid red; */
     font-family: arial;
     display: flex;
     justify-content: center;
@@ -16,8 +17,10 @@
     flex-direction: column;
   
   }
+  h1{padding: 0;margin: 0;}
   #canvas {
-    margin-top: 10px;
+    /* border: 2px solid green; */
+    /* margin-top: 10px; */
     /* background-color: azure; */
     border-radius: 10px;
   }
@@ -27,7 +30,7 @@
   } */
   #source {
     display: none;
-    
+    /* border: 2px solid blue;   */
     
   }
   
