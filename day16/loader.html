@@ -72,21 +72,11 @@
   
         function OpenWindow() {
           var url = "game.html";
-          var windowSize = "height=1700,width=1700";
-          var newWindow = window.open(url, "_top", windowSize);
+          var windowSize = "height=1800,width=1800";
+          var newWindow = window.open(url, "_blank", windowSize);
           newWindow.moveTo(500, 100);
         }
         document.querySelector(".container1").style.display = "none";
-  
-        //  setTimeout(stoploading,5000)
-        //  function stoploading() {
-  
-        //   var url = "game.html";
-        //   var windowSize = "height=500,width=500";
-        //   var newWindow = window.open(url, "_blank", windowSize);
-        //   newWindow.moveTo(500, 100);
-  
-        //  }
         function play(){
             var audio= new Audio('Justin-Bieber-Baby-instrumentalfx.mp3');
             audio.play();
