@@ -4,18 +4,24 @@
     box-sizing: border-box;
   }
   body {
-    min-height: 100vh;
-    color: white;
-    font-size: 30px;
     background-image: url('https://img.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg?size=626&ext=jpg&ga=GA1.2.654880244.1659504230');
     background-size: cover;
-    /* border: 2px solid red; */
-    font-family: arial;
-    display: flex;
+     text-align: center;
     justify-content: center;
+    color: white; 
     align-items: center;
-    flex-direction: column;
-  
+     /* border: 2px solid red; */
+    overflow: hidden;
+  }
+  .cls{
+    /* font-family: arial; */
+    /* flex-direction: column; */
+    min-width: 100vh;
+    width: 100%;
+    height: 100vh;
+    font-size: 30px;
+    display: flex;
+    
   }
   h1{padding: 0;margin: 0;}
   #canvas {
