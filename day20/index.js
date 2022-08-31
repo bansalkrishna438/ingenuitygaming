@@ -1,0 +1,10 @@
+// import{message} from "./library.js" ;
+// import{display} from "library.js";
+// import{Employee} from "library.js";
+import{Employee,display,message} from "./library.js";
+console.log(message);
+var name = prompt("enter your name");
+var data = display(name);
+console.log(data);
+let emp1=new Employee("dcd",10110,"jhbdcdj");
+emp1.disDetails();
