@@ -8,60 +8,45 @@ var mushObstacleImage, turtleObstacleImage, obstaclesGroup;
 var gameState = "PLAY";
 var restartImg;
 function preload() {
-  bgImage = loadImage("images/bgnew.jpg");
+  bgImage = loadImage("images/bgnew1.jpg");
   mario_running = loadAnimation(
-    "images/mar1.png",
-    "images/mar2.png",
-    "images/mar3.png",
-    "images/mar4.png",
-    "images/mar5.png",
-    "images/mar6.png",
-    "images/mar7.png"
+    "images/fish1.png"
   );
-  brickImage = loadImage("images/brick.png");
+  brickImage = loadImage("images/wood1.png");
   coinImage = loadAnimation(
-    "images/con1.png",
-    "images/con3.png",
-    "images/con4.png",
-    "images/con5.png"
+    "images/food1.png"
+
   );
   // Add Sounds
   coinSound = loadSound("sounds/coinSound.mp3");
   jumpSound = loadSound("sounds/jump.mp3");
   mushObstacleImage = loadAnimation(
-    "images/mush1.png",
-    "images/mush2.png",
-    "images/mush4.png",
-    "images/mush5.png",
-    "images/mush6.png"
+    "images/octo1.png"
   );
   turtleObstacleImage = loadAnimation(
-    "images/tur1.png",
-    "images/tur2.png",
-    "images/tur3.png",
-    "images/tur4.png",
-    "images/tur5.png"
+    "images/star1.png"
   );
-  mario_collided = loadAnimation("images/dead.png");
+  mario_collided = loadAnimation("images/fish3.png");
   dieSound = loadSound("sounds/dieSound.mp3");
   restartImg = loadImage("images/restart.png");
 }
 function setup() {
-  createCanvas(1000, 600);
+  createCanvas(1350,640);
   bg = createSprite(600, 300);
   bg.addImage(bgImage);
-  bg.scale = 0.5;
+  bg.scale = 2;
   mario = createSprite(200, 520, 20, 50);
   mario.addAnimation("running", mario_running);
-  mario.scale = 0.2;
+  mario.scale = 0.3;
   ground = createSprite(200, 580, 400, 10);
   brickGroup = new Group();
   coinsGroup = new Group();
   obstaclesGroup = new Group();
   mario.addAnimation("collided", mario_collided);
-  restart = createSprite(500, 300);
+  restart = createSprite(700, 300);
   restart.addImage(restartImg);
   restart.visible = false;
+  
 }
 function draw() {
   drawSprites();
@@ -72,8 +57,13 @@ function draw() {
       bg.x = bg.width / 4;
     }
     // Make Mario Jump-Up
-    if (keyDown("space")) {
+    if (keyDown("up")) {
       mario.velocityY = -10;
+      // Mario Jump Sound
+      jumpSound.play();
+    }
+    else if (keyDown("down")) {
+      mario.velocityY = 4;
       // Mario Jump Sound
       jumpSound.play();
     }
@@ -123,23 +113,23 @@ function draw() {
     obstaclesGroup.setLifetimeEach(-1);
     mario.changeAnimation("collided", mario_collided);
     mario.y = 570;
-    mario.scale = 0.4;
+    mario.scale = .8;
     restart.visible = true;
     if (mousePressedOver(restart)) {
       restartGame();
     }
   }
   // Score Card
-  textSize(20);
-  fill("brown");
-  text("Coins Collected: " + coinScore, 500, 50);
+  textSize(30);
+  fill("black");
+  text("hit the baits: " + coinScore, 600, 50);
 }
 function generateBricks() {
   if (frameCount % 70 === 0) {
     var brick = createSprite(1200, 120, 40, 10);
     brick.y = random(50, 450);
     brick.addImage(brickImage);
-    brick.scale = 0.5;
+    brick.scale = 0.3;
     brick.velocityX = -5;
     brick.lifetime = 250;
     brickGroup.add(brick);
@@ -150,8 +140,8 @@ function generateCoins() {
     var coin = createSprite(1200, 120, 40, 10);
     coin.y = Math.round(random(80, 350));
     coin.addAnimation("coin", coinImage);
-    coin.scale = 0.1;
-    coin.velocityX = -3;
+    coin.scale = 0.2;
+    coin.velocityX = -2;
     coin.lifetime = 500;
     coinsGroup.add(coin);
   }
@@ -160,7 +150,7 @@ function generateObstacles() {
   if (frameCount % 100 === 0) {
     var obstacle = createSprite(1200, 555, 10, 40);
     obstacle.velocityX = -5;
-    obstacle.scale = 0.1;
+    obstacle.scale = 0.3;
     var rand = Math.round(random(1, 2));
     switch (rand) {
       case 1:
@@ -182,7 +172,7 @@ function restartGame() {
   brickGroup.destroyEach();
   coinsGroup.destroyEach();
   mario.changeAnimation("running", mario_running);
-  mario.scale = 0.2;
+  mario.scale = 0.3;
   coinScore = 0;
   restart.visible = false;
 }
